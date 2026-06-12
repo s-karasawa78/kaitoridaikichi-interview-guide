@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>買取大吉 面接対策ガイド｜訪問営業経験者向け</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --c-bg: #F7F5F2;
+    --c-surface: #FFFFFF;
+    --c-primary: #1A3A5C;
+    --c-accent: #C8860A;
+    --c-accent-light: #FAF0DC;
+    --c-accent-mid: #E8A020;
+    --c-text: #1C1C1C;
+    --c-muted: #6B6760;
+    --c-border: #E2DDD8;
+    --c-red-bg: #FDF0F0;
+    --c-red: #B03030;
+    --c-amber-bg: #FAF0DC;
+    --c-amber: #8A5808;
+    --c-blue-bg: #EFF4FA;
+    --c-blue: #1A3A5C;
+    --font-display: 'Noto Serif JP', serif;
+    --font-body: 'Noto Sans JP', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--c-bg);
+    color: var(--c-text);
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: var(--c-primary);
+    color: #fff;
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -80px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: rgba(200, 134, 10, 0.15);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -60px;
+    width: 240px; height: 240px;
+    border-radius: 50%;
+    background: rgba(200, 134, 10, 0.10);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--c-accent-mid);
+    border: 1px solid var(--c-accent-mid);
+    border-radius: 20px;
+    padding: 4px 14px;
+    margin-bottom: 1.25rem;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  .hero h1 span {
+    color: var(--c-accent-mid);
+  }
+  .hero-sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.72);
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .hero-stat {
+    text-align: center;
+  }
+  .hero-stat .num {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--c-accent-mid);
+    display: block;
+  }
+  .hero-stat .lbl {
+    font-size: 11px;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── LAYOUT ─── */
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  section {
+    padding: 3rem 0 2rem;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--c-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+  }
+
+  /* ─── KEY POINTS BANNER ─── */
+  .key-banner {
+    background: var(--c-accent-light);
+    border-left: 4px solid var(--c-accent);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+  .key-banner p {
+    font-size: 14px;
+    color: var(--c-amber);
+    line-height: 1.75;
+  }
+  .key-banner strong {
+    font-weight: 700;
+    color: var(--c-primary);
+  }
+
+  /* ─── STRATEGY BOX ─── */
+  .strategy-quote {
+    background: var(--c-primary);
+    color: #fff;
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
+  .strategy-quote::before {
+    content: '"';
+    font-family: var(--font-display);
+    font-size: 5rem;
+    color: var(--c-accent-mid);
+    opacity: 0.3;
+    position: absolute;
+    top: -10px; left: 16px;
+    line-height: 1;
+  }
+  .strategy-quote p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.92);
+    position: relative;
+  }
+  .strategy-quote .quote-note {
+    font-size: 12px;
+    color: var(--c-accent-mid);
+    margin-top: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── Q&A CARDS ─── */
+  .qa-card {
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: 12px;
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+  .qa-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s;
+  }
+  .qa-header:hover {
+    background: #FAFAF8;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 3px;
+    letter-spacing: 0.04em;
+  }
+  .badge-red { background: var(--c-red-bg); color: var(--c-red); border: 1px solid #ECC8C8; }
+  .badge-amber { background: var(--c-amber-bg); color: var(--c-amber); border: 1px solid #E0C890; }
+  .badge-blue { background: var(--c-blue-bg); color: var(--c-blue); border: 1px solid #C4D4E8; }
+  .qa-q {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--c-primary);
+    flex: 1;
+    line-height: 1.5;
+  }
+  .qa-arrow {
+    font-size: 14px;
+    color: var(--c-muted);
+    flex-shrink: 0;
+    margin-top: 3px;
+    transition: transform 0.25s;
+  }
+  .qa-arrow.open { transform: rotate(180deg); }
+
+  .qa-body {
+    display: none;
+    padding: 0 1.25rem 1.25rem;
+    border-top: 1px solid var(--c-border);
+  }
+  .qa-body.open { display: block; }
+
+  .intent-box {
+    background: #F7F7F4;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 12px 0 10px;
+    font-size: 13px;
+    color: var(--c-muted);
+    line-height: 1.65;
+  }
+  .intent-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--c-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+  .tags {
+    margin-bottom: 12px;
+  }
+  .tag {
+    display: inline-block;
+    background: var(--c-blue-bg);
+    color: var(--c-blue);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 4px;
+    border: 1px solid #C4D4E8;
+  }
+  .answer-wrap {
+    border-left: 3px solid var(--c-accent);
+    padding-left: 14px;
+  }
+  .answer-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--c-accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .answer-text {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--c-text);
+    white-space: pre-line;
+  }
+
+  /* ─── TIPS GRID ─── */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 1.5rem;
+  }
+  .tip-card {
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: 10px;
+    padding: 1.1rem 1.1rem 1rem;
+  }
+  .tip-icon {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  .tip-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--c-primary);
+    margin-bottom: 5px;
+  }
+  .tip-desc {
+    font-size: 12px;
+    color: var(--c-muted);
+    line-height: 1.65;
+  }
+
+  /* ─── DIVIDER ─── */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--c-border);
+    margin: 1rem 0 2rem;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--c-primary);
+    color: rgba(255,255,255,0.55);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 12px;
+  }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 540px) {
+    .hero { padding: 3rem 1.25rem 2.5rem; }
+    .hero-stats { gap: 1.25rem; }
+    .wrap { padding: 0 1rem; }
+    .strategy-quote { padding: 1.25rem; }
+    .qa-header { padding: 0.9rem 1rem; }
+    .qa-body { padding: 0 1rem 1rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">訪問営業経験者向け</div>
+    <h1>買取大吉<br><span>面接対策ガイド</span></h1>
+    <p class="hero-sub">訪問営業3年の経験を最大限に活かして、面接官の心をつかむための完全ガイド</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="num">950+</span>
+        <span class="lbl">全国店舗数</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">99.1%</span>
+        <span class="lbl">店舗継続率</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">月5h以下</span>
+        <span class="lbl">平均残業時間</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">6〜8組</span>
+        <span class="lbl">1日平均接客数</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+  <div class="wrap">
+
+    <!-- STRATEGY -->
+    <section>
+      <div class="section-label">Core Strategy</div>
+      <div class="section-title">訪問営業経験を「最大の武器」に変える戦略</div>
+
+      <div class="key-banner">
+        <p>買取大吉の接客業務の核心は<strong>「価格交渉でお客様に納得してもらう」</strong>こと。<br>
+        訪問営業で鍛えた「警戒している初対面の人の心を開く力・傾聴力・交渉力」は、そのまま強みになります。</p>
+      </div>
+
+      <div class="strategy-quote">
+        <p>訪問営業では断られることが当たり前の環境でしたが、お客様が最終的に「あなたから買ってよかった」と言ってくれる経験を積んできました。買取でも、お客様に「売ってよかった」と思ってもらえる接客をしたいと思っています。</p>
+        <div class="quote-note">▲ 面接で使える決め台詞</div>
+      </div>
+
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-icon">🤝</div>
+          <div class="tip-title">初対面の信頼構築</div>
+          <div class="tip-desc">警戒しているお客様の心を開く経験は、買取来店者の不安解消に直結する</div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">💬</div>
+          <div class="tip-title">傾聴・ヒアリング力</div>
+          <div class="tip-desc">「話を聞いてもらえる」という安心感が成約率に直結する現場に活かせる</div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">💰</div>
+          <div class="tip-title">価格交渉・クロージング</div>
+          <div class="tip-desc">断られることに慣れているから、「もっと高くして」という押し返しにも動じない</div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">📈</div>
+          <div class="tip-title">数字で語れる実績</div>
+          <div class="tip-desc">契約率・件数など具体的な数字があると、未経験分野でも説得力が生まれる</div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Q&A -->
+    <section>
+      <div class="section-label">Interview Q&amp;A</div>
+      <div class="section-title">頻出質問と回答例<br><span style="font-size:1rem; font-weight:400; color:var(--c-muted);">タップして回答例を確認</span></div>
+
+      <div id="qa-list"></div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- FINAL TIPS -->
+    <section>
+      <div class="section-label">On The Day</div>
+      <div class="section-title">当日の注意点</div>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-icon">😊</div>
+          <div class="tip-title">フランクな雰囲気に乗る</div>
+          <div class="tip-desc">大吉の面接はフランクと公式に明言あり。ガチガチに準備するより、自分の言葉で話す姿勢が好印象</div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">📖</div>
+          <div class="tip-title">回答は自分の言葉に変換</div>
+          <div class="tip-desc">この例文はたたき台。自分の実体験のエピソードに置き換えることで、説得力が格段に上がる</div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🔢</div>
+          <div class="tip-title">具体的な数字を用意する</div>
+          <div class="tip-desc">訪問件数・契約率・売上などの数字を事前に整理しておく。「チーム平均比○%」でもOK</div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🌱</div>
+          <div class="tip-title">SDGs・社会貢献を意識</div>
+          <div class="tip-desc">大吉はリユース×SDGsを強調している。単なる転職でなく「業界の意義に共感している」姿勢を見せる</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <p>買取大吉 面接対策ガイド｜訪問営業経験者向け</p>
+</footer>
+
+<script>
+const qas = [
+  {
+    badge: "最頻出", cls: "badge-red",
+    q: "自己PRをしてください",
+    intent: "「なぜあなたを採用すべきか」を聞く最重要質問。訪問営業＝断られる環境で成果を出した経験として、傾聴力・信頼構築力を押し出す。",
+    tags: ["訪問営業3年", "傾聴・信頼構築", "数字での実績"],
+    answer: `訪問営業を3年間経験し、「初対面で警戒しているお客様の話を引き出し、信頼を得て成果につなげる力」を培いました。
+
+最初は断られることも多くありましたが、まずお客様の話をじっくり聞くことを徹底しました。その結果、担当エリアでの契約率をチーム平均の1.5倍に伸ばすことができました。
+
+買取の現場でも、お客様は「大切なものを手放す」という不安を持って来店されます。その不安をしっかり受け止め、納得して売っていただける接客ができると自信を持っています。`
+  },
+  {
+    badge: "最頻出", cls: "badge-red",
+    q: "なぜ買取大吉を志望したのですか？",
+    intent: "業界・会社への理解度を確認している。「なんとなく」ではなく、業界成長性＋大吉の安定経営＋自分のスキルの3つのかけ算で答えると強い。",
+    tags: ["業界成長性", "営業スキル活用", "SDGs共感"],
+    answer: `リユース業界が「終活・SDGs・不用品整理」の需要拡大で今後も伸びる分野だと感じており、この波に乗りたいと思いました。
+
+中でも買取大吉は店舗継続率99.1%と業界トップクラスの安定性があり、長く腰を据えて成長できる環境だと感じました。
+
+また、訪問営業で培った「お客様との交渉力・信頼構築力」が、査定後の価格交渉の場で直接活かせると考えています。`
+  },
+  {
+    badge: "最頻出", cls: "badge-red",
+    q: "前職の営業経験について教えてください",
+    intent: "実績の具体性と、買取業務への転用可能性を見ている。数字と「困難→工夫→結果」のストーリーで話す。",
+    tags: ["数字の具体性", "課題→工夫→結果", "接客への転用"],
+    answer: `法人・個人向けの訪問営業を3年間担当しました。月に○○件のアポイントを自分で開拓し、契約率は最終的にチーム内トップクラスを維持しました。
+
+最初はドアを開けてもらえないことも多く、「どうすれば話を聞いてもらえるか」を日々研究しました。玄関先での第一声・表情・言葉選びを変えるだけで反応が大きく変わることを学びました。
+
+この経験は、買取でお客様が「売るかどうか迷っている」場面での寄り添い方や、価格提示後の交渉にそのまま活きると思っています。`
+  },
+  {
+    badge: "よく聞かれる", cls: "badge-amber",
+    q: "買取は未経験ですが、大丈夫ですか？",
+    intent: "フォローの姿勢を見つつ、不安がないか確認している。「未経験でも大丈夫」という採用スタンスに乗りつつ、営業経験で補える点を強調する。",
+    tags: ["学習意欲", "営業経験の補完性", "素直さ"],
+    answer: `商品知識は未経験ですが、入社後に一から吸収する姿勢はあります。
+
+査定の「技術」は学べますが、お客様に寄り添う「接客力・交渉力」は簡単には身につかないと聞いています。その点では、訪問営業で鍛えた対人スキルが、知識を補いながら早期に活躍するための土台になると考えています。`
+  },
+  {
+    badge: "よく聞かれる", cls: "badge-amber",
+    q: "「もっと高くならないか」と言われたらどう対応しますか？",
+    intent: "価格交渉のロールプレイ的な確認。訪問営業の交渉経験をそのまま活かして答えられる。共感→根拠説明→誠実な着地が鉄板。",
+    tags: ["傾聴・共感", "論理的説明", "誠実さ"],
+    answer: `まずは「そう感じられるのは当然です」と共感し、お客様の気持ちを受け止めます。
+
+次に、査定額の根拠（市場相場・コンディション・付属品の有無など）をわかりやすく説明します。その上で、私の権限の範囲内で最大限の金額を提示し、それでも難しい場合は正直にお伝えします。
+
+大切なのは「納得して売っていただく」こと。訪問営業でも無理なクロージングは後悔につながることを学んでいます。`
+  },
+  {
+    badge: "よく聞かれる", cls: "badge-amber",
+    q: "苦手なタイプのお客様や、難しかった場面はありますか？",
+    intent: "自己認識力と成長力を見ている。弱点を正直に言いつつ、「それをどう乗り越えたか」に重心を置く。",
+    tags: ["自己認識", "改善行動", "経験からの学び"],
+    answer: `訪問営業時代、一方的にまくし立てるタイプの方の対応が当初は苦手でした。
+
+ですが「この方は何かに不満・不安を感じているから言葉が多くなっている」と気づいてから、まず徹底的に聞く姿勢に切り替えました。すると相手も落ち着き、スムーズに話が進むケースが増えました。
+
+買取でも「いくらになるかわからない不安」からお客様が強く出る場面があると思います。同じアプローチで対応できると思っています。`
+  },
+  {
+    badge: "確認される", cls: "badge-blue",
+    q: "土日・祝日の勤務は問題ありませんか？",
+    intent: "シンプルな条件確認。明確にYesと伝えつつ、前職での経験も添えると安心感が増す。",
+    tags: ["勤務条件確認", "前向きな姿勢"],
+    answer: `問題ありません。お客様が来やすい土日祝日に働ける環境が、この仕事の本質だと理解しています。前職の訪問営業でも土曜稼働は普通でしたので、抵抗はありません。`
+  },
+  {
+    badge: "確認される", cls: "badge-blue",
+    q: "5年後のキャリアイメージを教えてください",
+    intent: "長期的に活躍してくれるかを確認している。「査定スキル＋接客力→管理・教育担当」という成長ストーリーで答えると好印象。",
+    tags: ["成長意欲", "会社への貢献", "具体性"],
+    answer: `まず3年で、金・ブランド品・時計など主要カテゴリの査定スキルを習得し、一人で安心してお客様を担当できるレベルになりたいです。
+
+5年後は、自分の接客・交渉の経験を後輩に伝えられる存在になりたいと思っています。訪問営業で「人を動かす」ことを学んだので、チームを引っ張る役割にも挑戦したいです。`
+  }
+];
+
+const list = document.getElementById('qa-list');
+
+qas.forEach((item, i) => {
+  const card = document.createElement('div');
+  card.className = 'qa-card';
+
+  card.innerHTML = `
+    <div class="qa-header" id="hdr-${i}" role="button" aria-expanded="false" aria-controls="body-${i}" tabindex="0">
+      <span class="badge ${item.cls}">${item.badge}</span>
+      <span class="qa-q">Q. ${item.q}</span>
+      <span class="qa-arrow" id="arr-${i}" aria-hidden="true">▾</span>
+    </div>
+    <div class="qa-body" id="body-${i}" role="region" aria-labelledby="hdr-${i}">
+      <div class="intent-label">面接官の意図・対策ポイント</div>
+      <div class="intent-box">${item.intent}</div>
+      <div class="tags">${item.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+      <div class="answer-wrap">
+        <div class="answer-label">回答例</div>
+        <div class="answer-text">${item.answer}</div>
+      </div>
+    </div>
+  `;
+
+  list.appendChild(card);
+
+  const hdr = card.querySelector('.qa-header');
+  const body = card.querySelector('.qa-body');
+  const arr = card.querySelector('.qa-arrow');
+
+  function toggle() {
+    const open = body.classList.toggle('open');
+    arr.classList.toggle('open', open);
+    hdr.setAttribute('aria-expanded', open);
+  }
+
+  hdr.addEventListener('click', toggle);
+  hdr.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }});
+});
+</script>
+
+</body>
+</html>
